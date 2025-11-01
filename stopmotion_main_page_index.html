@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stopmotion Studio — Home</title>
+  <meta name="description" content="SunBrickStudios — handcrafted stop motion films" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* deep blue-gray */
+      --card:#0b1220;
+      --muted:#98a0b3;
+      --accent:#ffab24;
+      --glass: rgba(255,255,255,0.04);
+      --maxW:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg) 0%, #071026 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--maxW);margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff6b6b);display:flex;align-items:center;justify-content:center;font-weight:800;color:#071026;font-family:Playfair Display}
+    nav{display:flex;gap:18px;align-items:center}
+    a.navlink{color:var(--muted);text-decoration:none;font-weight:600}
+    a.navlink:hover{color:#fff}
+    .cta{background:var(--accent);color:#071026;padding:10px 14px;border-radius:9px;font-weight:700;text-decoration:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:28px;align-items:center;padding:48px 0}
+    .hero-left h1{font-family:Playfair Display; font-size:44px;margin:0 0 8px}
+    .lead{color:var(--muted);font-size:16px;margin-bottom:18px}
+    .buttons{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn-outline{border:1px solid rgba(255,255,255,0.08);color:var(--accent);background:transparent}
+    .btn-primary{background:var(--accent);color:#071026}
+
+    .stage{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:14px;backdrop-filter:blur(6px);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .video-placeholder{height:320px;border-radius:8px;background:radial-gradient(circle at 10% 20%, rgba(255,255,255,0.02), transparent 15%), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8a3d1a2a2ea3d3eeb8b0f7c3a275c0b4') center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
+    .stats{display:flex;gap:10px;justify-content:space-between;margin-top:12px}
+    .stat{flex:1;padding:10px;border-radius:10px;background:var(--glass);text-align:center}
+    .stat strong{display:block;font-size:18px;color:#fff}
+
+    /* Gallery */
+    .gallery{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .shot{height:160px;border-radius:10px;background-size:cover;background-position:center;box-shadow:inset 0 0 0 2px rgba(0,0,0,0.25)}
+
+    /* Features / Workflow */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+    .card h3{margin-top:0}
+    .workflow{display:flex;gap:12px;align-items:center}
+    .step{flex:1;padding:12px;border-radius:10px;background:var(--card);text-align:center}
+
+    /* Testimonials */
+    .testimonials{margin-top:36px}
+    .quote{padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+
+    /* Footer */
+    footer{margin-top:48px;padding:22px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .hero-right{order:-1}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .grid-3{grid-template-columns:1fr}
+    }
+    @media (max-width:520px){
+      .hero-left h1{font-size:28px}
+      .video-placeholder{height:220px}
+      .gallery{grid-template-columns:1fr}
+    }
+
+    /* tiny interactive touches */
+    .logo, .btn, .stat, .shot, .card{transition:transform .22s ease, box-shadow .22s ease}
+    .logo:hover{transform:translateY(-3px)}
+    .card:hover{transform:translateY(-6px)}
+    .shot:hover{transform:scale(1.03)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="SBS LOGO (1)" alt="Flowers in Chania"></div>   
+        <div>
+          <div style="font-weight:800">SunBrickStudios</div>
+          <div style="font-size:12px;color:var(--muted)">Handcrafted stopmotion animations</div>
+        </div>
+      </div>
+
+      <nav aria-label="Primary">
+        <a class="navlink" href="#work">Work</a>
+        <a class="navlink" href="#services">Services</a>
+        <a class="navlink" href="#workshops">Workshops</a>
+        <a class="navlink" href="#about">About</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-left">
+          <h1>Beautiful stop motion — made frame by frame.</h1>
+          <p class="lead">From concept to post-production: we craft tactile, charming stop motion films for brands, music videos and personal projects. Studio, remote shoots, and hands-on workshops.</p>
+
+          <div class="buttons">
+            <a href="#work" class="btn btn-primary">View Portfolio</a>
+            <a href="#services" class="btn btn-outline">Our Services</a>
+          </div>
+
+          <div class="stats" aria-hidden="true">
+            <div class="stat"><strong>120+</strong><span style="color:var(--muted)">Projects</span></div>
+            <div class="stat"><strong>10</strong><span style="color:var(--muted)">Years</span></div>
+            <div class="stat"><strong>45</strong><span style="color:var(--muted)">Workshops</span></div>
+          </div>
+        </div>
+
+        <aside class="hero-right">
+          <div class="stage">
+            <div class="video-placeholder" role="img" aria-label="Stopmotion stage preview">Play Demo • 00:58</div>
+            <div style="display:flex;gap:8px;margin-top:12px;align-items:center;justify-content:space-between">
+              <div style="font-size:13px;color:var(--muted)">Studio — London</div>
+              <div style="font-size:13px;color:var(--muted)">Available for hire</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="work">
+        <h2 style="font-family:Playfair Display;margin:28px 0 12px">Selected Work</h2>
+        <p style="color:var(--muted);margin-top:0;margin-bottom:14px">A changing selection of short films, commercial spots and experimental loops.</p>
+
+        <div class="gallery" aria-label="Portfolio gallery">
+          <div class="shot" style="background-image:url('https://images.unsplash.com/photo-1526318472351-c75fcf0704f3?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ab9b7f7be5d6b5a7bda6e9ea3c4e2f9c')"></div>
+          <div class="shot" style="background-image:url('https://images.unsplash.com/photo-1504502353091-7bd86a7f1f8b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2a9b1b2bb6a6df8b3d8e2c9a7a4b7c6d')"></div>
+          <div class="shot" style="background-image:url('https://images.unsplash.com/photo-1517519014922-8fcf1d3c3d00?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d')"></div>
+          <div class="shot" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f')"></div>
+          <div class="shot" style="background-image:url('https://images.unsplash.com/photo-1506976785307-8732e854ad5d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e')"></div>
+          <div class="shot" style="background-image:url('https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcdef1234567890abcdef1234567890')"></div>
+        </div>
+
+        <div style="text-align:center;margin-top:14px">
+          <a class="btn btn-outline" href="#work">See more work</a>
+        </div>
+      </section>
+
+      <section id="services" class="grid-3">
+        <div class="card">
+          <h3>Commercial Films</h3>
+          <p class="lead" style="margin-top:6px;color:var(--muted)">Brand spots, product shoots, and social-first loops produced from storyboard to final grade.</p>
+        </div>
+        <div class="card">
+          <h3>Music & Narrative</h3>
+          <p class="lead" style="margin-top:6px;color:var(--muted)">Short films, videos and collaborations with directors & artists.</p>
+        </div>
+        <div class="card">
+          <h3>Workshops & Tuition</h3>
+          <p class="lead" style="margin-top:6px;color:var(--muted)">Half-day and multi-day hands-on classes covering puppet-making, rigging and frame capture.</p>
+        </div>
+      </section>
+
+      <section id="workshops" style="margin-top:24px">
+        <h2 style="font-family:Playfair Display;margin:12px 0">How we work</h2>
+        <div class="workflow" aria-hidden="true">
+          <div class="step">01<br><strong style="display:block;margin-top:8px">Concept</strong></div>
+          <div class="step">02<br><strong style="display:block;margin-top:8px">Design</strong></div>
+          <div class="step">03<br><strong style="display:block;margin-top:8px">Capture</strong></div>
+          <div class="step">04<br><strong style="display:block;margin-top:8px">Post</strong></div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="testimonials">
+        <h2 style="font-family:Playfair Display;margin:12px 0">Testimonials</h2>
+        <div class="quote">
+          "The Stopmotion Studio team turned our product idea into a playful, tactile film that performed beyond expectations on social. Smooth, patient and endlessly creative." — Maya K., Creative Director
+        </div>
+      </section>
+
+      <section id="about" style="margin-top:28px">
+        <h2 style="font-family:Playfair Display;margin:12px 0">About the studio</h2>
+        <p style="color:var(--muted)">We are a small team of animators, set builders and editors based in London. We specialise in handcrafted techniques — armatures, miniature sets and stop-motion capture workflows — blended with modern post-production.</p>
+
+        <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;align-items:center">
+          <div style="min-width:180px">
+            <strong>Studio hours</strong>
+            <div style="color:var(--muted);font-size:14px">Mon — Fri, 10:00 — 18:00</div>
+          </div>
+          <div style="min-width:220px">
+            <strong>Location</strong>
+            <div style="color:var(--muted);font-size:14px">Shoreditch, London</div>
+          </div>
+          <div style="margin-left:auto">
+            <a class="btn btn-primary" href="#contact">Book a visit</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:36px">
+        <h2 style="font-family:Playfair Display;margin:12px 0">Get in touch</h2>
+        <form onsubmit="event.preventDefault();alert('Thanks — contact request sent (demo).');" style="display:grid;grid-template-columns:1fr 320px;gap:12px;align-items:start">
+          <div>
+            <label style="display:block;margin-bottom:6px">Your name</label>
+            <input required placeholder="Jane Doe" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+            <label style="display:block;margin:10px 0 6px">Email</label>
+            <input required type="email" placeholder="you@email.com" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+            <label style="display:block;margin:10px 0 6px">Message</label>
+            <textarea required placeholder="Tell us about your project" rows="6" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:6px">Project type</label>
+            <select style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+              <option>Commercial</option>
+              <option>Music / Short</option>
+              <option>Workshop</option>
+              <option>Other</option>
+            </select>
+
+            <div style="margin-top:12px">
+              <label style="display:block;margin-bottom:6px">Preferred date</label>
+              <input type="date" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+            </div>
+
+            <div style="margin-top:18px;text-align:right">
+              <button class="btn btn-primary" type="submit" style="width:100%">Send request</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="flex:1">© <strong>Stopmotion Studio</strong> — crafted stop-motion since 2015</div>
+        <div style="color:var(--muted);font-size:14px">Follow: <a href="#" style="color:var(--muted);text-decoration:underline">Instagram</a> • <a style="color:var(--muted);text-decoration:underline" href="#">Vimeo</a></div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Small JS to lazy-load gallery images with a fade-up animation
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const shots = document.querySelectorAll('.shot');
+      shots.forEach((s,i)=>{
+        s.style.opacity = 0; s.style.transform = 'translateY(10px)';
+        setTimeout(()=>{ s.style.transition='all .6s cubic-bezier(.2,.9,.3,1)'; s.style.opacity=1; s.style.transform='translateY(0)'; }, 120*i);
+      })
+    })
+  </script>
+</body>
+</html>
