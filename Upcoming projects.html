@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#0f1724;
@@ -50,7 +51,6 @@
     .btn:hover{transform:translateY(-2px)}
 
     .stage{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:14px;backdrop-filter:blur(6px);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-    .video-placeholder{height:320px;border-radius:8px;background:radial-gradient(circle at 10% 20%, rgba(255,255,255,0.02), transparent 15%), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8a3d1a2a2ea3d3eeb8b0f7c3a275c0b4') center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
     .stats{display:flex;gap:10px;justify-content:space-between;margin-top:12px}
     .stat{flex:1;padding:10px;border-radius:10px;background:var(--glass);text-align:center}
     .stat strong{display:block;font-size:18px;color:#fff}
@@ -62,16 +62,28 @@
     .shot{height:160px;background-size:cover;background-position:center;border-radius:10px;transition:transform 0.4s ease}
     .shot-link:hover .shot{transform:scale(1.08)}
 
-    /* Features / Workflow */
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
-    .card h3{margin-top:0}
-    .workflow{display:flex;gap:12px;align-items:center}
-    .step{flex:1;padding:12px;border-radius:10px;background:var(--card);text-align:center}
-
-    /* Testimonials */
-    .testimonials{margin-top:36px}
-    .quote{padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+    /* Form Section */
+    #contact-section{
+      margin:60px 0;
+      display:flex;
+      justify-content:center;
+    }
+    .form-wrapper{
+      background:var(--glass);
+      border:1px solid rgba(255,255,255,0.05);
+      border-radius:14px;
+      padding:20px;
+      max-width:720px;
+      width:100%;
+      box-shadow:0 8px 30px rgba(0,0,0,0.4);
+      backdrop-filter:blur(6px);
+    }
+    .form-wrapper h2{
+      text-align:center;
+      margin-bottom:20px;
+      font-family:Playfair Display;
+    }
+    iframe{border-radius:10px;}
 
     /* Footer */
     footer{margin-top:48px;padding:22px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
@@ -81,15 +93,14 @@
       .hero{grid-template-columns:1fr;}
       .hero-right{order:-1}
       .gallery{grid-template-columns:repeat(2,1fr)}
-      .grid-3{grid-template-columns:1fr}
     }
     @media (max-width:520px){
       .hero-left h1{font-size:28px}
-      .video-placeholder{height:220px}
       .gallery{grid-template-columns:1fr}
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -106,22 +117,59 @@
         <a class="navlink" href="#services">Upcoming projects</a>
         <a class="navlink" href="#workshops">Members</a>
         <a class="navlink" href="#about">About</a>
-        <a class="cta" href="#contact">Contact</a>
+        <a class="cta" href="#contact-section">Contact</a>
       </nav>
     </header>
 
-<iframe width="640px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=o9n4cUczDUCoUtIXzz1lTsrFu8CYQe9Noe0Hthj4-PpUMjUzTDRFWVFTRldTWFBBVlE0NVhSVkYwRi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <h1>Beautiful stop motion — made frame by frame.</h1>
+        <p class="lead">
+          From concept to post-production: we craft tactile, charming stop motion films for brands,
+          music videos and personal projects.
+        </p>
 
-      <!-- Rest of your sections (services, workshops, testimonials, about, contact) remain unchanged -->
+        <div class="buttons">
+          <a href="#work" class="btn btn-primary">View Portfolio</a>
+          <a href="#services" class="btn btn-outline">Our Services</a>
+        </div>
 
-    </main>
+        <div class="stats">
+          <div class="stat"><strong>120+</strong><span style="color:var(--muted)">Projects</span></div>
+          <div class="stat"><strong>10</strong><span style="color:var(--muted)">Years</span></div>
+          <div class="stat"><strong>45</strong><span style="color:var(--muted)">Workshops</span></div>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="stage">
+          <img src="myhero.jpg" alt="Behind the scenes stopmotion" style="width:100%; border-radius:8px;">
+          <div style="display:flex;gap:8px;margin-top:12px;align-items:center;justify-content:space-between">
+            <div style="font-size:13px;color:var(--muted)">Studio — London</div>
+            <div style="font-size:13px;color:var(--muted)">Available for hire</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact-section">
+      <div class="form-wrapper">
+        <h2>Get in Touch</h2>
+        <iframe width="640px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=o9n4cUczDUCoUtIXzz1lTsrFu8CYQe9Noe0Hthj4-PpUMjUzTDRFWVFTRldTWFBBVlE0NVhSVkYwRi4u&embed=true" 
+          frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" 
+          allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+        </iframe>
+      </div>
+    </section>
 
     <footer>
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-        <div style="flex:1"> <strong>SunBrickStudios</strong> — making stopmotions since 2024</div>
-        <div style="color:var(--muted);font-size:14px">Follow: 
-          <a href="https://www.youtube.com/@SunBrickStudios" style="color:var(--muted);text-decoration:underline">Youtube</a> • 
-      
+        <div style="flex:1"><strong>SunBrickStudios</strong> — making stopmotions since 2024</div>
+        <div style="color:var(--muted);font-size:14px">
+          Follow: 
+          <a href="https://www.youtube.com/@SunBrickStudios" style="color:var(--muted);text-decoration:underline">YouTube</a>
         </div>
       </div>
     </footer>
