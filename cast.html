@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stopmotion Studio — Home</title>
+  <link rel="icon" type="image/x-icon" href="SBS LOGO (1).png">
+  <meta name="description" content="SunBrickStudios — handcrafted stop motion films" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#98a0b3;
+      --accent:#ffab24;
+      --glass: rgba(255,255,255,0.04);
+      --maxW:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg) 0%, #071026 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--maxW);margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:75px;height:75px;display:flex;align-items:center;justify-content:center;}
+    nav{display:flex;gap:18px;align-items:center}
+    a.navlink{color:var(--muted);text-decoration:none;font-weight:600}
+    a.navlink:hover{color:#fff}
+    .cta{background:var(--accent);color:#071026;padding:10px 14px;border-radius:9px;font-weight:700;text-decoration:none}
+
+    /* Story Section */
+    .story {
+      margin-top: 40px;
+      background: rgba(255,255,255,0.02);
+      padding: 24px;
+      border-radius: 12px;
+      line-height: 1.6;
+    }
+    .story p {margin: 0 0 1em;}
+    .story br {margin-bottom: 0.5em;}
+    .story strong {color: var(--accent);}
+    footer{margin-top:48px;padding:22px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="SBS LOGO (1).png" alt="SunBrickStudios Logo" style="width:75px;height:75px;"></div>   
+        <div>
+          <div style="font-weight:800">SunBrickStudios</div>
+          <div style="font-size:12px;color:var(--muted)">Handcrafted stopmotion animations</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Story Section -->
+    <main class="story">
+       <h1>Cast:</h1>
+      <p> Scrooge - M Boxall <br>
+        Bob - W Meldrum
+        Fred - J Kay
+      </p>
+    </main>
+
+    <footer>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="flex:1"> <strong>SunBrickStudios</strong> — making stopmotions since 2024</div>
+        <div style="color:var(--muted);font-size:14px">Follow: 
+          <a href="https://www.youtube.com/@SunBrickStudios" style="color:var(--muted);text-decoration:underline">YouTube</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Fade-in animation for any gallery or story items (optional)
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const story = document.querySelector('.story');
+      story.style.opacity = 0;
+      story.style.transform = 'translateY(10px)';
+      setTimeout(()=>{
+        story.style.transition='all .6s cubic-bezier(.2,.9,.3,1)';
+        story.style.opacity=1;
+        story.style.transform='translateY(0)';
+      }, 200);
+    });
+  </script>
+</body>
+</html>
