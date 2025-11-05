@@ -1,11 +1,10 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stopmotion Studio — Home</title>
-    <link rel="icon" type="image/x-icon" href="SBS LOGO (1).png">
+  <link rel="icon" type="image/x-icon" href="SBS LOGO (1).png">
   <meta name="description" content="SunBrickStudios — handcrafted stop motion films" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,315 +34,429 @@
     /* Header */
     header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff6b6b);display:flex;align-items:center;justify-content:center;font-weight:800;color:#071026;font-family:Playfair Display}
+    .logo{width:75px;height:75px;display:flex;align-items:center;justify-content:center;}
     nav{display:flex;gap:18px;align-items:center}
     a.navlink{color:var(--muted);text-decoration:none;font-weight:600}
     a.navlink:hover{color:#fff}
     .cta{background:var(--accent);color:#071026;padding:10px 14px;border-radius:9px;font-weight:700;text-decoration:none}
 
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 460px;gap:28px;align-items:center;padding:48px 0}
-    .hero-left h1{font-family:Playfair Display; font-size:44px;margin:0 0 8px}
-    .lead{color:var(--muted);font-size:16px;margin-bottom:18px}
-    .buttons{display:flex;gap:12px}
-    .btn{padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700;transition:all .25s ease}
-    .btn-outline{border:1px solid rgba(255,255,255,0.08);color:var(--accent);background:transparent}
-    .btn-primary{background:var(--accent);color:#071026}
-    .btn:hover{transform:translateY(-2px)}
-
-    .stage{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:14px;backdrop-filter:blur(6px);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-    .video-placeholder{height:320px;border-radius:8px;background:radial-gradient(circle at 10% 20%, rgba(255,255,255,0.02), transparent 15%), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8a3d1a2a2ea3d3eeb8b0f7c3a275c0b4') center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
-    .stats{display:flex;gap:10px;justify-content:space-between;margin-top:12px}
-    .stat{flex:1;padding:10px;border-radius:10px;background:var(--glass);text-align:center}
-    .stat strong{display:block;font-size:18px;color:#fff}
-
-    /* Gallery */
-    .gallery{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .shot-link{display:block;position:relative;overflow:hidden;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.2);transition:transform 0.3s ease}
-    .shot-link:hover{transform:scale(1.03)}
-    .shot{height:160px;background-size:cover;background-position:center;border-radius:10px;transition:transform 0.4s ease}
-    .shot-link:hover .shot{transform:scale(1.08)}
-
-    /* Features / Workflow */
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
-    .card h3{margin-top:0}
-    .workflow{display:flex;gap:12px;align-items:center}
-    .step{flex:1;padding:12px;border-radius:10px;background:var(--card);text-align:center}
-
-    /* Testimonials */
-    .testimonials{margin-top:36px}
-    .quote{padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
-
-    /* Footer */
+    /* Story Section */
+    .story {
+      margin-top: 40px;
+      background: rgba(255,255,255,0.02);
+      padding: 24px;
+      border-radius: 12px;
+      line-height: 1.6;
+    }
+    .story p {margin: 0 0 1em;}
+    .story br {margin-bottom: 0.5em;}
+    .story strong {color: var(--accent);}
     footer{margin-top:48px;padding:22px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
-
-    /* Responsive */
-    @media (max-width:980px){
-      .hero{grid-template-columns:1fr;}
-      .hero-right{order:-1}
-      .gallery{grid-template-columns:repeat(2,1fr)}
-      .grid-3{grid-template-columns:1fr}
-    }
-    @media (max-width:520px){
-      .hero-left h1{font-size:28px}
-      .video-placeholder{height:220px}
-      .gallery{grid-template-columns:1fr}
-    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
       <div class="brand">
-        <div class="logo"><img src="SBS LOGO (1).png" style="width:75px;height:75px;"></div>   
+        <div class="logo"><img src="SBS LOGO (1).png" alt="SunBrickStudios Logo" style="width:75px;height:75px;"></div>   
         <div>
           <div style="font-weight:800">SunBrickStudios</div>
           <div style="font-size:12px;color:var(--muted)">Handcrafted stopmotion animations</div>
         </div>
       </div>
+    </header>
 
-<body>
-<br><br><br>
-   <p>
-    Children tucked in bed grandpa in room, 
+    <!-- Story Section -->
+    <main class="story">
+      <p>
+        Children tucked in bed grandpa in room, <br><br>
 
- 
+        Child, Grandpa could you tell us another story. <br>
+        Child, yes please grandpa cracker dash origins was so great. <br>
+        Grandpa, well I suppose I could, the question is what. <br>
+        Pause. <br>
+        I know. I shall tell you the story of A Christmas Carol. I am sure you have heard of it before. <br>
+        Children, yes. <br>
+        Grandpa, well I have it here. <br>
+        Children, but isn’t it really old? <br>
+        Grandpa, yes, I don’t have to read it if you're going to complain. <br>
+        Children, No! We’re sorry Grandpa. <br><br>
 
-Child, Grandpa could you tell us another story. <br>
+        Pulls out book. <br>
+        Grandpa: Alright... <br><br>
 
-Child, yes please grandpa cracker dash origins was so great  <br>
+        G: Marley was dead. To begin with. <br>
+        Zoom out, town – window – room. <br>
+        Scrooge inside, writing — Fred walks in. <br><br>
 
-Grandpa, well I suppose I could, the question is what. <br>
+        Fred: A merry Christmas uncle! God save you! <br>
+        Scrooge: Bah! Humbug. <br>
+        Fred: Surely you don’t mean that, uncle! <br>
+        Scrooge: Nothing merry about Christmas. What have you to be merry? You are poor enough! <br>
+        Fred: What have you to be morose? You are rich enough. <br>
+        Scrooge: Bah! Humbug. <br><br>
+        
 
-Pause  <br>
+Fred: Surely you don’t mean that, uncle! <br> 
 
-I know. I shall tell you the story of A Christmas Carol. I am sure you have heard of it before <br>
+  
 
-Children, yes  <br>
+Scrooge: Nothing merry about Christmas. What have you to be merry? You are poor enough! <br> 
 
-Grandpa, well I have it here <br>
+  
 
-Children, but isn’t it really old <br>
+Fred: What have you to be morose? You are rich enough. <br> 
 
-Grandpa, yes, I don’t have to read it if you're going to complain. <br>
-<br>
-Children, No! We’re sorry Grandpa 
+  
 
- 
-<br>
-Pulls out book 
-<br>
-Grandpa: alright,  
+Scrooge: Bah! Humbug.  
 
- 
-<br><br>
-G: Marley was dead. To begin with 
-<br>
-Zoom out, town – window – room <br>
-Scrooge inside. Writing — Fred walks in <br>
+<br> 
 
-Fred: A merry Christmas uncle! God save you! <br>
+Fred: Sigh If you find that you have a change of mind, come join us for a family dinner at noon, the coming season.  
 
-Scrooge: Bah! Humbug. 
-<br>
-Fred: Surely you don’t mean that, uncle! <br>
+<br> 
 
-Scrooge: Nothing merry about Christmas. What have you to be merry? You are poor enough! <br>
+Scrooge: Not even on my deathbed. Keep Christmas your own way, nephew, and I will keep it in mine.  
 
-Fred: What have you to be morose? You are rich enough. <br>
+<br> 
 
-Scrooge: Bah! Humbug. 
-<br>
-Fred: Sigh If you find that you have a change of mind, come join us for a family dinner at noon, the coming season. 
-<br>
-Scrooge: Not even on my deathbed. Keep Christmas your own way, nephew, and I will keep it in mine. 
-<br>
-Fred: But you don’t keep it 
-<br>
-Scrooge: Then let me leave it alone. 
-<br>
-Fred: There are many things from which I might have derived good uncle, by which I have not profited, I dare say, Christmas among the rest. But I am sure I have always thought of Christmas time, when it has come round as a good time; a kind, forgiving, charitable, pleasant time; the only time I know of, in the long calendar of the year, when men and women seem by one consent to open their shut-up hearts freely, and to think of people below them as if they really were fellow-passengers to the grave, and not another race of creatures bound on other journeys. And therefore, uncle, though it has never put a scrap of gold or silver in my pocket, I believe that it has done me good and will do me good; and I say, God bless it! 
-<br>
-Scrooge: Let me hear another sound from you and you’ll keep your Christmas by losing your situation! 
-<br>
-You’re quite a powerful speaker, sir. I wonder you don’t go into Parliament. 
-<br>
-Fred: Don’t be angry, uncle!  
-<br>
-Scrooge: Bah humbug. 
-<br>
-Fred: But why? Why? 
-<br>
-Scrooge: Why did you get married? 
-<br>
-Fred: Because I fell in love. 
-<br>
-Scrooge: Because you fell in love! (mockingly) Good afternoon! 
-<br>
-Fred: Nay, uncle, why— 
-<br>
-Scrooge: Good afternoon. 
-<br>
-Fred: Merry Christmas. 
-<br>
-Scrooge: Good afternoon. 
-<br>
-Fred: And a Happy New Year! 
-<br>
-Scrooge: Good afternoon!! 
-<br>
-(Fred leaving. Bob opens door for him.) 
-<br>
-Bob: Merry Christmas to you, sir. 
-<br>
-Fred: And to you too, Mr. Cratchit. 
-<br>
-(Two men enter — Jim and John) 
-<br>
-Jim: Scrooge and Marley’s, I believe. Have I the pleasure of addressing Mr. Scrooge or Mr. Marley? 
-<br>
-Scrooge: Mr. Marley has been dead these 7 years. 
-<br>
-Jim: We have no doubt his liberality is well represented by his surviving partner. 
-<br>
-Scrooge: Go on… 
-<br>
-Jim: At this festive time of the year, we gather donations for those in destitution. Many thousands in need of common necessities. 
-<br>
-Scrooge: Are there no prisons? 
-<br>
-Jim: Yes, plenty of prisons. 
-<br>
-Scrooge: Are there no workhouses? 
-<br>
-Jim: Yes, though I wish it was not so. 
-<br>
-Scrooge: The treadmill and poor law in full vigor? 
-<br>
-Jim: Both very busy, sir. 
-<br>
-Scrooge: Oh! To what you said. I was afraid they were not. 
-<br>
-Jim: Hmm… well, the few of us endeavor to raise a fund to buy the poor some meat and drink. What shall I put you down for? 
-<br>
-Scrooge: Nothing. 
-<br>
-Jim: You wish to remain anonymous? 
-<br>
-Scrooge: I wish to be left alone! I support the establishments I have mentioned, and those badly off must go there. 
-<br>
- 
+Fred: But you don’t keep it  
 
-Jim: Many can't go there; many would rather die. 
-<br>
-Scrooge: If they would rather die than they better do it! and decrease the surplus population. Good afternoon Gentlemen 
-<br>
-(They leave) 
-<br><br>
-Scrooge: (Turning to Bob): I'll take it you'll want all day to tomorrow, I suppose 
-<br>
-Bob: If quite convenient sir. 
-<br>
-Scrooge: It is not and it's not fair. A poor excuse for picking a man's pocket every 25th December 
-<br>
-But I suppose you must have the whole day (Getting ready to leave) Be here all the earlier next morning. 
-<br>
-Bob: I shall 
-<br>
-(Leaving) walk down street enter his home 
-<br>
-(Large house inside handy) (walk to armchair and sit down) Reading book 
-<br>
-(Creaking) Scrooge bolts round, (laughing) - looks window door. 
-<br>
-Marley float in-bells ringing 
-<br>
-Marley: Much 
-<br>
-Scrooge: Who are you 
-<br>
-Marley: Ask me who I was. 
-<br>
-Scrooge: Who were you then 
-<br>
-Marley: In life I was your partner Jacob Marley 
-<br>
-Scrooge: Can you sit down? 
-<br>
-Marley: I can. 
-<br>
-Scrooge: Do it then 
-<br>
-Marley sits down 
-<br>
-Marley: You do not believe in me 
-<br>
-Scrooge: No, for anything can affect one's senses. Even a slight disorder to the stomach. 
-<br>
-Marley’s Head drop of, chains, speak in union 
-<br>
-Head and Marley. Do you believe in me now? 
-<br>
-Scrooge: Mercy dreadful apparition 
-<br>
-Puts head back on 
-<br>
-Marley: Do you believe in me or not. 
-<br>
-Scrooge: I do, I must. Jacob, you are fettered, tell me why. 
-<br>
-Marley: I wear the chains I forged in life. I made it link by link, and yard by yard, is its pattern strange to you? Or would you know the weight and length of yours if mine was like this, those 7 years ago. I am sure you have labored at it ever since. 
+<br> 
 
-<br>Scrooge: Speak comfort to me, Jacob! 
-<br>
-Marley: I have none to give. For I cannot rest. I cannot stay. My spirit having never left the walls of our little counting house 
-<br>
-Scrooge: But you were a good man of business. 
-<br>
-Marley: Business! Mankind was my business! (Striking chains) Hear me! My time is nearly gone. 
-<br>
-Scrooge: I will but, speak your point 
-<br>
-Marley: I am here tonight to warn you that you have yet a chance at escaping my fate 
-<br>
-Scrooge: You were always a good friend to me thankee 
-<br>
-Marley: You will be haunted by three spirits. 
-<br>
-Scrooge: In this is the hope you spoke of Jacob? 
-<br>
-Marley: The first expect tomorrow. 
-<br>
- </p>
-</body>
- 
-      <!-- Rest of your sections (services, workshops, testimonials, about, contact) remain unchanged -->
+Scrooge: Then let me leave it alone.  
 
+<br> 
+
+Fred: There are many things from which I might have derived good uncle, by which I have not profited, I dare say, Christmas among the rest. But I am sure I have always thought of Christmas time, when it has come round as a good time; a kind, forgiving, charitable, pleasant time; the only time I know of, in the long calendar of the year, when men and women seem by one consent to open their shut-up hearts freely, and to think of people below them as if they really were fellow-passengers to the grave, and not another race of creatures bound on other journeys. And therefore, uncle, though it has never put a scrap of gold or silver in my pocket, I believe that it has done me good and will do me good; and I say, God bless it!  
+
+<br> 
+
+Scrooge: Let me hear another sound from you and you’ll keep your Christmas by losing your situation!  
+
+<br> 
+
+You’re quite a powerful speaker, sir. I wonder you don’t go into Parliament.  
+
+<br> 
+
+Fred: Don’t be angry, uncle!   
+
+<br> 
+
+Scrooge: Bah humbug.  
+
+<br> 
+
+Fred: But why? Why?  
+
+<br> 
+
+Scrooge: Why did you get married?  
+
+<br> 
+
+Fred: Because I fell in love.  
+
+<br> 
+
+Scrooge: Because you fell in love! (mockingly) Good afternoon!  
+
+<br> 
+
+Fred: Nay, uncle, why—  
+
+<br> 
+
+Scrooge: Good afternoon.  
+
+<br> 
+
+Fred: Merry Christmas.  
+
+<br> 
+
+Scrooge: Good afternoon.  
+
+<br> 
+
+Fred: And a Happy New Year!  
+
+<br> 
+
+Scrooge: Good afternoon!!  
+
+<br> 
+
+(Fred leaving. Bob opens door for him.)  
+
+<br> 
+
+Bob: Merry Christmas to you, sir.  
+
+<br> 
+
+Fred: And to you too, Mr. Cratchit.  
+
+<br> 
+
+(Two men enter — Jim and John)  
+
+<br> 
+
+Jim: Scrooge and Marley’s, I believe. Have I the pleasure of addressing Mr. Scrooge or Mr. Marley?  
+
+<br> 
+
+Scrooge: Mr. Marley has been dead these 7 years.  
+
+<br> 
+
+Jim: We have no doubt his liberality is well represented by his surviving partner.  
+
+<br> 
+
+Scrooge: Go on…  
+
+<br> 
+
+Jim: At this festive time of the year, we gather donations for those in destitution. Many thousands in need of common necessities.  
+
+<br> 
+
+Scrooge: Are there no prisons?  
+
+<br> 
+
+Jim: Yes, plenty of prisons.  
+
+<br> 
+
+Scrooge: Are there no workhouses?  
+
+<br> 
+
+Jim: Yes, though I wish it was not so.  
+
+<br> 
+
+Scrooge: The treadmill and poor law in full vigor?  
+
+<br> 
+
+Jim: Both very busy, sir.  
+
+<br> 
+
+Scrooge: Oh! To what you said. I was afraid they were not.  
+
+<br> 
+
+Jim: Hmm… well, the few of us endeavor to raise a fund to buy the poor some meat and drink. What shall I put you down for?  
+
+<br> 
+
+Scrooge: Nothing.  
+
+<br> 
+
+Jim: You wish to remain anonymous?  
+
+<br> 
+
+Scrooge: I wish to be left alone! I support the establishments I have mentioned, and those badly off must go there.  
+
+<br> 
+
+  
+
+  
+
+Jim: Many can't go there; many would rather die.  
+
+<br> 
+
+Scrooge: If they would rather die than they better do it! and decrease the surplus population. Good afternoon Gentlemen  
+
+<br> 
+
+(They leave)  
+
+<br><br> 
+
+Scrooge: (Turning to Bob): I'll take it you'll want all day to tomorrow, I suppose  
+
+<br> 
+
+Bob: If quite convenient sir.  
+
+<br> 
+
+Scrooge: It is not and it's not fair. A poor excuse for picking a man's pocket every 25th December  
+
+<br> 
+
+But I suppose you must have the whole day (Getting ready to leave) Be here all the earlier next morning.  
+
+<br> 
+
+Bob: I shall  
+
+<br> 
+
+(Leaving) walk down street enter his home  
+
+<br> 
+
+(Large house inside handy) (walk to armchair and sit down) Reading book  
+
+<br> 
+
+(Creaking) Scrooge bolts round, (laughing) - looks window door.  
+
+<br> 
+
+Marley float in-bells ringing  
+
+<br> 
+
+Marley: Much  
+
+<br> 
+
+Scrooge: Who are you  
+
+<br> 
+
+Marley: Ask me who I was.  
+
+<br> 
+
+Scrooge: Who were you then  
+
+<br> 
+
+Marley: In life I was your partner Jacob Marley  
+
+<br> 
+
+Scrooge: Can you sit down?  
+
+<br> 
+
+Marley: I can.  
+
+<br> 
+
+Scrooge: Do it then  
+
+<br> 
+
+Marley sits down  
+
+<br> 
+
+Marley: You do not believe in me  
+
+<br> 
+
+Scrooge: No, for anything can affect one's senses. Even a slight disorder to the stomach.  
+
+<br> 
+
+Marley’s Head drop of, chains, speak in union  
+
+<br> 
+
+Head and Marley. Do you believe in me now?  
+
+<br> 
+
+Scrooge: Mercy dreadful apparition  
+
+<br> 
+
+Puts head back on  
+
+<br> 
+
+Marley: Do you believe in me or not.  
+
+<br> 
+
+Scrooge: I do, I must. Jacob, you are fettered, tell me why.  
+
+<br> 
+
+Marley: I wear the chains I forged in life. I made it link by link, and yard by yard, is its pattern strange to you? Or would you know the weight and length of yours if mine was like this, those 7 years ago. I am sure you have labored at it ever since.  
+
+  
+
+<br>Scrooge: Speak comfort to me, Jacob!  
+
+<br> 
+
+Marley: I have none to give. For I cannot rest. I cannot stay. My spirit having never left the walls of our little counting house  
+
+<br> 
+
+Scrooge: But you were a good man of business.  
+
+<br> 
+
+Marley: Business! Mankind was my business! (Striking chains) Hear me! My time is nearly gone.  
+
+<br> 
+
+Scrooge: I will but, speak your point  
+
+<br> 
+
+Marley: I am here tonight to warn you that you have yet a chance at escaping my fate  
+
+<br> 
+
+Scrooge: You were always a good friend to me thankee  
+
+<br> 
+
+Marley: You will be haunted by three spirits.  
+
+<br> 
+
+Scrooge: In this is the hope you spoke of Jacob?  
+
+<br> 
+
+Marley: The first expect tomorrow.  
+
+<br> 
+      </p>
     </main>
 
     <footer>
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
         <div style="flex:1"> <strong>SunBrickStudios</strong> — making stopmotions since 2024</div>
         <div style="color:var(--muted);font-size:14px">Follow: 
-          <a href="https://www.youtube.com/@SunBrickStudios" style="color:var(--muted);text-decoration:underline">Youtube</a> • 
-      
+          <a href="https://www.youtube.com/@SunBrickStudios" style="color:var(--muted);text-decoration:underline">YouTube</a>
         </div>
       </div>
     </footer>
   </div>
 
   <script>
-    // Simple animation for gallery items
+    // Fade-in animation for any gallery or story items (optional)
     document.addEventListener('DOMContentLoaded', ()=>{
-      const shots = document.querySelectorAll('.shot-link');
-      shots.forEach((s,i)=>{
-        s.style.opacity = 0; s.style.transform = 'translateY(10px)';
-        setTimeout(()=>{
-          s.style.transition='all .6s cubic-bezier(.2,.9,.3,1)';
-          s.style.opacity=1; s.style.transform='translateY(0)';
-        }, 150*i);
-      })
+      const story = document.querySelector('.story');
+      story.style.opacity = 0;
+      story.style.transform = 'translateY(10px)';
+      setTimeout(()=>{
+        story.style.transition='all .6s cubic-bezier(.2,.9,.3,1)';
+        story.style.opacity=1;
+        story.style.transform='translateY(0)';
+      }, 200);
     });
   </script>
 </body>
