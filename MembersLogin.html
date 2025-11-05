@@ -1,0 +1,221 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SunBrickStudios — Contact</title>
+   <link rel="icon" type="image/x-icon" href="SBS LOGO (1).png">
+  <meta name="description" content="SunBrickStudios — handcrafted stop motion films" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#98a0b3;
+      --accent:#ffab24;
+      --glass: rgba(255,255,255,0.04);
+      --maxW:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg) 0%, #071026 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--maxW);margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff6b6b);display:flex;align-items:center;justify-content:center;font-weight:800;color:#071026;font-family:Playfair Display}
+    nav{display:flex;gap:18px;align-items:center}
+    a.navlink{color:var(--muted);text-decoration:none;font-weight:600}
+    a.navlink:hover{color:#fff}
+    .cta{background:var(--accent);color:#071026;padding:10px 14px;border-radius:9px;font-weight:700;text-decoration:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:28px;align-items:center;padding:48px 0}
+    .hero-left h1{font-family:Playfair Display; font-size:44px;margin:0 0 8px}
+    .lead{color:var(--muted);font-size:16px;margin-bottom:18px}
+    .buttons{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700;transition:all .25s ease}
+    .btn-outline{border:1px solid rgba(255,255,255,0.08);color:var(--accent);background:transparent}
+    .btn-primary{background:var(--accent);color:#071026}
+    .btn:hover{transform:translateY(-2px)}
+
+    .stage{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:14px;backdrop-filter:blur(6px);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .stats{display:flex;gap:10px;justify-content:space-between;margin-top:12px}
+    .stat{flex:1;padding:10px;border-radius:10px;background:var(--glass);text-align:center}
+    .stat strong{display:block;font-size:18px;color:#fff}
+
+    /* Gallery */
+    .gallery{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .shot-link{display:block;position:relative;overflow:hidden;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.2);transition:transform 0.3s ease}
+    .shot-link:hover{transform:scale(1.03)}
+    .shot{height:160px;background-size:cover;background-position:center;border-radius:10px;transition:transform 0.4s ease}
+    .shot-link:hover .shot{transform:scale(1.08)}
+
+
+  <title>Login Page</title>
+   <link rel="icon" type="image/x-icon" href="Logo.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-container {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #357ae8;
+    }
+    .error {
+      color: red;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <h2>Login</h2>
+  <div id="errorMsg" class="error"></div>
+  <form id="loginForm">
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<script>
+  // Dummy user database
+  const users = {
+    "PauletCadetClub": "WeArePaulet",
+
+  };
+
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value;
+
+    if (users[username] && users[username] === password) {
+      // Redirect to dashboard.html on successful login
+      window.location.href = "NameSelect.html";
+    } else {
+      document.getElementById("errorMsg").textContent = "Invalid username or password.";
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+    /* Footer */
+    footer{margin-top:48px;padding:22px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .hero-right{order:-1}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){
+      .hero-left h1{font-size:28px}
+      .gallery{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="SBS LOGO (1).png" style="width:75px;height:75px;"></div>   
+        <div>
+          <div style="font-weight:800">SunBrickStudios</div>
+          <div style="font-size:12px;color:var(--muted)">Handcrafted stopmotion animations</div>
+        </div>
+      </div>
+
+      <nav aria-label="Primary">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="#services">Upcoming projects</a>
+        <a class="navlink" href="#workshops">Members</a>
+        <a class="navlink" href="#about">About</a>
+        <a class="cta" href="#contact-section">Contact</a>
+      </nav>
+    </header>
+
+
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact-section">
+      <div class="form-wrapper">
+        <h2>Get in Touch</h2>
+        <iframe width="640px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=o9n4cUczDUCoUtIXzz1lTsrFu8CYQe9Noe0Hthj4-PpUMjUzTDRFWVFTRldTWFBBVlE0NVhSVkYwRi4u&embed=true" 
+          frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" 
+          allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="flex:1"><strong>SunBrickStudios</strong> — making stopmotions since 2024</div>
+        <div style="color:var(--muted);font-size:14px">
+          Follow: 
+          <a href="https://www.youtube.com/@SunBrickStudios" style="color:var(--muted);text-decoration:underline">YouTube</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Simple animation for gallery items
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const shots = document.querySelectorAll('.shot-link');
+      shots.forEach((s,i)=>{
+        s.style.opacity = 0; s.style.transform = 'translateY(10px)';
+        setTimeout(()=>{
+          s.style.transition='all .6s cubic-bezier(.2,.9,.3,1)';
+          s.style.opacity=1; s.style.transform='translateY(0)';
+        }, 150*i);
+      })
+    });
+  </script>
+</body>
+</html>
