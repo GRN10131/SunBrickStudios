@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SunBrickStudios — Explore</title>
+  <link rel="icon" type="image/x-icon" href="SBS LOGO (1).png">
+  <meta name="description" content="Explore SunBrickStudios projects and stories" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#98a0b3;
+      --accent:#ffab24;
+      --glass: rgba(255,255,255,0.05);
+      --maxW:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg) 0%, #071026 100%);
+      color:#e6eef8;
+      line-height:1.5;
+    }
+    .container{max-width:var(--maxW);margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:75px;height:75px;display:flex;align-items:center;justify-content:center;}
+    .brand-title{font-weight:800}
+    .brand-sub{font-size:12px;color:var(--muted)}
+
+    /* Grid of Squircles */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+      gap:28px;
+      margin-top:48px;
+    }
+    .squircle{
+      aspect-ratio:1/1;
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border-radius:28px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      text-decoration:none;
+      color:#fff;
+      transition:all .3s ease;
+      box-shadow:0 4px 20px rgba(0,0,0,0.3);
+      backdrop-filter:blur(8px);
+    }
+    .squircle:hover{
+      transform:translateY(-6px) scale(1.03);
+      background:linear-gradient(180deg, var(--accent), #ff6b6b);
+      color:#071026;
+    }
+    .squircle img{
+      width:64px;
+      height:64px;
+      margin-bottom:10px;
+      border-radius:16px;
+    }
+    .squircle h3{
+      margin:0;
+      font-family:Playfair Display;
+      font-size:18px;
+      font-weight:700;
+    }
+    .squircle p{
+      font-size:14px;
+      color:var(--muted);
+      margin:6px 0 0;
+    }
+    .squircle:hover p{color:#071026}
+
+    /* Footer */
+    footer{margin-top:60px;padding:22px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="SBS LOGO (1).png" alt="SunBrickStudios Logo" style="width:75px;height:75px;"></div>   
+        <div>
+          <div class="brand-title">SunBrickStudios</div>
+          <div class="brand-sub">Handcrafted stopmotion animations</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h1 style="font-family:'Playfair Display';font-size:36px;margin-top:30px;">Explore Our Worlds</h1>
+      <p style="color:var(--muted);max-width:600px;">
+        Step into the worlds we’ve crafted — from timeless tales to original stopmotion adventures.
+      </p>
+
+      <div class="grid">
+        <a href="christmascarol.html" class="squircle">
+          <img src="https://img.icons8.com/fluency/96/christmas-star.png" alt="Christmas Carol">
+          <h3>A Christmas Carol</h3>
+          <p>The classic tale reimagined in stop motion.</p>
+        </a>
+
+        <a href="cracker-dash.html" class="squircle">
+          <img src="https://img.icons8.com/fluency/96/race-car.png" alt="Cracker Dash">
+          <h3>Cracker Dash</h3>
+          <p>Fast-paced clay animation full of humor.</p>
+        </a>
+
+        <a href="behind-scenes.html" class="squircle">
+          <img src="https://img.icons8.com/fluency/96/camera.png" alt="Behind the Scenes">
+          <h3>Behind the Scenes</h3>
+          <p>How our team builds worlds one brick at a time.</p>
+        </a>
+
+        <a href="about.html" class="squircle">
+          <img src="https://img.icons8.com/fluency/96/group.png" alt="About Us">
+          <h3>About the Studio</h3>
+          <p>Meet the storytellers behind the magic.</p>
+        </a>
+
+        <a href="contact.html" class="squircle">
+          <img src="https://img.icons8.com/fluency/96/send-letter.png" alt="Contact">
+          <h3>Contact</h3>
+          <p>Get in touch or collaborate on your project.</p>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="flex:1"><strong>SunBrickStudios</strong> — making stopmotions since 2024</div>
+        <div style="color:var(--muted);font-size:14px">
+          Follow: 
+          <a href="https://www.youtube.com/@SunBrickStudios" style="color:var(--muted);text-decoration:underline">YouTube</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Simple fade-in animation
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const squircles = document.querySelectorAll('.squircle');
+      squircles.forEach((sq, i)=>{
+        sq.style.opacity = 0;
+        sq.style.transform = 'translateY(20px)';
+        setTimeout(()=>{
+          sq.style.transition='all .6s cubic-bezier(.2,.9,.3,1)';
+          sq.style.opacity=1;
+          sq.style.transform='translateY(0)';
+        }, 150*i);
+      });
+    });
+  </script>
+</body>
+</html>
